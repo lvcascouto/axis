@@ -8,9 +8,10 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  
-  // Root of the project — where index.html lives
+  // Base public path
   base: "/",
+
+  // Root of the project — where index.html lives
   root: ".",
 
   // Static assets served as-is (copied to dist/ on build)
@@ -31,8 +32,30 @@ export default defineConfig({
     // Clears dist/ before each build
     emptyOutDir: true,
 
-    // Sourcemaps for production debugging (set to false to disable)
+    // Sourcemaps for production debugging
     sourcemap: false,
+
+    // Customize output structure
+    rollupOptions: {
+      output: {
+        // JavaScript files
+        entryFileNames: "js/[name]-[hash].js",
+
+        // Dynamic chunks
+        chunkFileNames: "js/[name]-[hash].js",
+
+        // Assets
+        assetFileNames: ({ name }) => {
+          // CSS files
+          if (name?.endsWith(".css")) {
+            return "css/[name]-[hash][extname]";
+          }
+
+          // Everything else keeps Vite's asset handling
+          return "assets/[name]-[hash][extname]";
+        },
+      },
+    },
   },
 
   // CSS / Sass settings

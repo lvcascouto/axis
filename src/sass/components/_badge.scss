@@ -33,6 +33,9 @@ $gap-badge:         token.$space-ui-2;
   line-height: $line-height-badge;
   
   white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   vertical-align: middle;
 }

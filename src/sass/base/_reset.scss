@@ -4,8 +4,7 @@
 // ===================================================
 
 *, ::before, ::after { 
-  -webkit-box-sizing: border-box; // Safari, Chrome, Android
-  box-sizing: border-box;         // IE/Edge
+  box-sizing: border-box;
 }
 
 * {

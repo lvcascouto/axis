@@ -361,6 +361,11 @@ Consulte o arquivo [LICENSE](./LICENSE) para mais detalhes.
 
 ## Autor
 
-Desenvolvido com muito código e café por [Lucas Couto](https://linkedin.com/in/lucas-coutoti).
+**`</>` Desenvolvido por**
 
-Conheça meu trabalho ou entre em contato pelo site [Lucas Code](https://bio.site/lucascode).
+**ʟᴜᴄᴀꜱ ᴄᴏᴜᴛᴏ // ᴅᴇꜱᴇɴᴠᴏʟᴠᴇᴅᴏʀ ᴡᴇʙ**   
+[**ʟɪɴᴋᴇᴅɪɴ**](https://linkedin.com/in/lucascouto-dev) ▪ [**ɢɪᴛʜᴜʙ**](https://github.com/lvcascouto)
+ 
+**ʟᴜᴄᴀꜱ ᴄᴏᴅᴇ // ᴡᴇʙ ᴅᴇᴠᴇʟᴏᴘᴍᴇɴᴛ ꜱᴛᴜᴅɪᴏ**  
+[**ᴡᴇʙꜱɪᴛᴇ**](https://lvcascode.com.br) ▪ [**ɪɴꜱᴛᴀɢʀᴀᴍ**](https://instagram.com/lvcascode)
+

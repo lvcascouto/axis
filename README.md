@@ -361,6 +361,10 @@ See the [LICENSE](./LICENSE) file for details.
 
 ## Author
 
-´</>´ Developed by [Lucas Couto](https://linkedin.com/in/lucascouto-dev).
+**`</>` ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ**
 
-See my work or get in touch at [Lucas Code](https://lvcascode.com.br).
+**ʟᴜᴄᴀꜱ ᴄᴏᴜᴛᴏ // ᴡᴇʙ ᴅᴇᴠᴇʟᴏᴘᴇʀ**   
+[**ʟɪɴᴋᴇᴅɪɴ**](https://linkedin.com/in/lucascouto-dev) ▪ [**ɢɪᴛʜᴜʙ**](https://github.com/lvcascouto)
+ 
+**ʟᴜᴄᴀꜱ ᴄᴏᴅᴇ // ᴡᴇʙ ᴅᴇᴠᴇʟᴏᴘᴍᴇɴᴛ ꜱᴛᴜᴅɪᴏ**  
+[**ᴡᴇʙꜱɪᴛᴇ**](https://lvcascode.com.br) ▪ [**ɪɴꜱᴛᴀɢʀᴀᴍ**](https://instagram.com/lvcascode)

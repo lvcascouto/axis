@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="public/assets/favicon/favicon.svg" width="130" height="130" alt="AXIS symbol"/>
+<img src="public/assets/favicon/favicon.svg" width="110" height="110" alt="AXIS symbol"/>
 
 # AXIS
 
@@ -361,6 +361,6 @@ See the [LICENSE](./LICENSE) file for details.
 
 ## Author
 
-Developed by [Lucas Couto](https://linkedin.com/in/lucas-coutoti).
+´</>´ Developed by [Lucas Couto](https://linkedin.com/in/lucascouto-dev).
 
-See my work or get in touch at [Lucas Code](https://bio.site/lucascode).
+See my work or get in touch at [Lucas Code](https://lvcascode.com.br).

@@ -2,22 +2,18 @@
 @use "../abstracts/mixins" as mix;
 
 // ===================================================
-// AXIS — CONTAINER SYSTEM (Structural Layout)
-// Purpose: Control horizontal flow and max-width constraints
+// AXIS ▪︎ CONTAINER SYSTEM (Structural Layout)
+// Control horizontal flow and max-width constraints
 // ===================================================
 // Naming:
 // .container
 // .container-{size}
 // ===================================================
 
-// ---------------------------------------------------
-// Default Container
-// ---------------------------------------------------
+// == Default Container ==
 .container { @include mix.container(); }
 
-// ---------------------------------------------------
 // Size Variants
-// ---------------------------------------------------
 @each $name, $size in token.$container-sizes {
   .container-#{$name} {
     @include mix.container($size);

@@ -26,11 +26,11 @@ Found something broken or behaving unexpectedly? Open an issue and include:
 
 ## Development Setup
 
-AXIS uses **Vite** to manage the development environment. To start contributing:
+AXIS uses **Vite** and **Yarn** to manage the development environment. To start contributing:
 
 1. Fork and clone the repository.
-2. Install dependencies: `npm install`
-3. Start the dev server: `npm run dev`
+2. Install dependencies: `yarn install`
+3. Start the dev server: `yarn dev`
 4. Open the local URL in your browser — changes are reflected instantly via HMR.
 
 ## New Components & Modules
@@ -69,7 +69,7 @@ Before opening a PR, please open an issue first so we can discuss the change. Wh
 1. Create a branch from `main`.
 2. Name your branch descriptively — e.g., `fix/button-alignment` or `feat/modal-module`.
 3. Keep the change focused — one PR per fix or feature.
-4. Run `npm run build` before submitting to ensure there are no bundling errors.
+4. Run `yarn build` before submitting to ensure there are no bundling errors.
 5. Write a clear PR description explaining what changed and why.
 
 ## Commit Style

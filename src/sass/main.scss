@@ -1,33 +1,28 @@
 // ===================================================
-// AXIS — MAIN ENTRY POINT
+// AXIS ▪︎ MAIN ENTRY POINT
+// Ordered architecture (Based on ITCSS methodology)
 // ===================================================
 
-// ---------------------------------------------------
-// 1. Abstracts
-// Functions, Mixins and Design tokens
-// ---------------------------------------------------
+// == 1. Abstracts ==
+// Functions, Mixins, and Design Tokens
 @use "abstracts";
 
-// ---------------------------------------------------
-// 2. Base
-// Global styles, Resets and Typography
-// ---------------------------------------------------
+// == 2. Base ==
+// Global resets, Typography base, and Utilities
 @use "base";
 
-// ---------------------------------------------------
-// 3. Layout
-// Structural systems (Flex, Grid and Containers)
-// ---------------------------------------------------
+// == 3. Layout ==
+// Structural systems (Flex, Grid, and Containers)
 @use "layout";
 
-// ---------------------------------------------------
-// 4. Components
-// Reusable neutral interface components (Button, card, badge...)
-// ---------------------------------------------------
+// == 4. Components ==
+// Reusable neutral UI elements (Button, Card, Badge)
 @use "components";
 
-// ---------------------------------------------------
-// 5. Sections
-// Project-level sections (empty in boiler)
-// ---------------------------------------------------
+// == 5. Sections ==
+// Global and reusable blocks (Header, Footer, Hero)
 @use "sections";
+
+// == 6. Pages ==
+// Page-specific styles and global component overrides
+@use "pages";

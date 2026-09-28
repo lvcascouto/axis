@@ -1,21 +1,25 @@
 // ===================================================
-// AXIS — MOTION (Primitive Tokens)
-// Purpose: Define temporal rhythm across the system
+// AXIS ▪︎ MOTION (Primitive Tokens)
+// Define temporal rhythm across the system
 // ===================================================
 
-// ---------------------------------------------------
-// Duration Scale
-// ---------------------------------------------------
-$duration-100: 0.1s;  // Instant feedback (click, tap)
-$duration-200: 0.2s;  // Hover interactions
-$duration-300: 0.3s;  // Small reveals, dropdowns
-$duration-400: 0.4s;  // Expandable sections, drawers
-$duration-500: 0.5s;  // Larger UI transitions (modals)
+// == Duration Scale ==
+$duration-100: 0.1s;
+$duration-200: 0.2s;
+$duration-300: 0.3s;
+$duration-400: 0.4s;
+$duration-500: 0.5s;
+$duration-600: 0.6s;
+$duration-800: 0.8s;
+$duration-1000:  1s;
 
+// == Easing Curves ==
+$ease-standard: cubic-bezier(0.4, 0, 0.2, 1);      // Default UI motion 
+$ease-in:       cubic-bezier(0.4, 0, 1, 1);        // Exit transitions 
+$ease-out:      cubic-bezier(0, 0, 0.2, 1);        // Enter transitions (elements appearing)
+$ease-back:     cubic-bezier(0.34, 1.56, 0.64, 1); // Playful micro-interactions
+
+// == Semantic Layer Tokens ==
 // ---------------------------------------------------
-// Easing Curves
+// Insert your semantic motion tokens here, if applicable
 // ---------------------------------------------------
-$ease-standard: cubic-bezier(0.4, 0, 0.2, 1);       // Default UI motion 
-$ease-in:       cubic-bezier(0.4, 0, 1, 1);         // Exit transitions 
-$ease-out:      cubic-bezier(0, 0, 0.2, 1);         // Enter transitions — elements appearing
-$ease-back:     cubic-bezier(0.34, 1.56, 0.64, 1);  // Playful micro-interactions

@@ -1,19 +1,22 @@
 @use "../abstracts/mixins" as mix;
 
 // ===================================================
-// AXIS — GLOBAL BASE STYLES
-// Element-level normalization
+// AXIS ▪︎ GLOBAL BASE STYLES
+// Element-level normalization and document defaults
 // ===================================================
 
+// == Accessibility ==
 * {
-  // Accessibility: Reliable focus indicator for keyboard navigation
+  // Reliable focus indicator for keyboard navigation
   &:focus-visible { @include mix.focus-ring(); }
   &:focus:not(:focus-visible) { outline: none; } 
 }
 
-// Accessibility: Reduced Motion
+// Reduced Motion
 @media (prefers-reduced-motion: reduce) {
-  * {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -21,20 +24,22 @@
   }
 }
 
+// == Document Defaults ==
 body {
   min-height: 100vh;
   min-height: 100dvh;
+  overflow-wrap: break-word;
 }
 
+// == Media Defaults ==
 img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
+// == Form & Interactive Defaults ==
 button, input, textarea, select, a {
   font: inherit;
   color: inherit;
 }
-
-ul, ol { list-style: none; }

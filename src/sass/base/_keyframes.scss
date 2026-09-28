@@ -1,0 +1,30 @@
+@use "../abstracts/tokens" as token;
+
+// ===================================================
+// AXIS ▪︎ GLOBAL KEYFRAMES
+// Fundamental animation instructions for UI interactions
+// ===================================================
+
+// == Fade ==
+@keyframes fade-in {
+  from { opacity: token.$opacity-0; }
+  to   { opacity: token.$opacity-100; }
+}
+
+// == Slide & Fade ==
+@keyframes slide-up {
+  from {
+    opacity: token.$opacity-0;
+    transform: translateY(token.$space-16);
+  }
+  to {
+    opacity: token.$opacity-100;
+    transform: translateY(token.$space-0);
+  }
+}
+
+// == Spin ==
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}

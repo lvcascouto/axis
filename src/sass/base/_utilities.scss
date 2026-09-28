@@ -2,23 +2,37 @@
 @use "../abstracts/mixins" as mix;
 
 // ===================================================
-// AXIS — UTILITY CLASSES
-// Purpose: Minimal, structural helper utilities
+// AXIS ▪︎ UTILITY CLASSES
+// Minimal structural helper utilities
 // ===================================================
 
-// ---------------------------------------------------
-// Accessibility — Visible only to screen readers
-// ---------------------------------------------------
+// == Accessibility ==
 .sr-only { @include mix.visually-hidden; } 
 
-// ---------------------------------------------------
-// Display
-// ---------------------------------------------------
+// == Display & Layout ==
 .block   { display: block; }
+.inline  { display: inline; }
 .hidden  { display: none !important; }
 
-// ---------------------------------------------------
-// Responsive Visibility (Desktop-first)
+// == Position ==
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed    { position: fixed; }
+.sticky   { position: sticky; }
+
+// == Text Alignment & Interaction ==
+.text-center { text-align: center; }
+.text-right  { text-align: right; }
+.text-left   { text-align: left; }
+.no-wrap     { white-space: nowrap; }
+.no-select   { -webkit-user-select: none; user-select: none; }
+
+// == Text Truncation ==
+.truncate    { @include mix.truncate(1); }
+.truncate-2  { @include mix.truncate(2); }
+.truncate-3  { @include mix.truncate(3); }
+
+// == Responsive Visibility (Desktop-first) ==
 // ---------------------------------------------------
 // Naming:
 // .hide-{breakpoint}-down  → max-width
@@ -40,27 +54,3 @@
     }
   }
 }
-
-// ---------------------------------------------------
-// Position
-// ---------------------------------------------------
-.relative { position: relative; }
-.absolute { position: absolute; }
-.sticky   { position: sticky; }
-
-// ---------------------------------------------------
-// Text Interaction
-// ---------------------------------------------------
-.no-select { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
-// ---------------------------------------------------
-// Text Alignment
-// ---------------------------------------------------
-.text-center { text-align: center; }
-.text-right  { text-align: right; }
-.no-wrap     { white-space: nowrap; }
-
-// ---------------------------------------------------
-// Text Truncation
-// ---------------------------------------------------
-.truncate    { @include mix.truncate(1); }
-.truncate-2  { @include mix.truncate(2); }

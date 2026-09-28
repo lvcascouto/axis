@@ -1,4 +1,7 @@
 // ===================================================
-// AXIS ▪︎ GLOBAL SCRIPTS
-// Global helpers and utility functions
+// AXIS ▪︎ PAGES
+// Centralized export for page-specific styles
 // ===================================================
+
+@forward "home";
+@forward "error";

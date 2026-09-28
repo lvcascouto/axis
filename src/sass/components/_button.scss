@@ -2,34 +2,32 @@
 @use "../abstracts/mixins" as mix;
 
 // ===================================================
-// AXIS — BUTTON (Structural Component)
+// AXIS ▪︎ BUTTON (Structural Component)
 // Neutral, scalable, token-driven
 // ===================================================
 
-// ---------------------------------------------------
 // Semantic Button Tokens
 // ---------------------------------------------------
-$gap-btn:         token.$space-ui-2;
+$gap-btn:         token.$space-2;
 $line-height-btn: token.$lh-none;
-$transition-btn:  token.$duration-200 token.$ease-standard;
+$transition-btn:  token.$duration-300 token.$ease-standard;
 
-$op-dsbld-btn:    token.$opacity-60;
+$op-dsbld-btn:    token.$opacity-50;
 $rd-full-round:   token.$radius-full;
 
-$padding-btn-sm:  token.$space-ui-8  token.$space-ui-16;
-$padding-btn-md:  token.$space-ui-10 token.$space-ui-20;
-$padding-btn-lg:  token.$space-ui-12 token.$space-ui-24;
-$padding-btn-xl:  token.$space-ui-16 token.$space-ui-32;
+$padding-btn-sm:  token.$space-8  token.$space-16;
+$padding-btn-md:  token.$space-10 token.$space-20;
+$padding-btn-lg:  token.$space-12 token.$space-24;
+$padding-btn-xl:  token.$space-16 token.$space-32;
+// ---------------------------------------------------
 
-// ---------------------------------------------------
-// Button Default
-// ---------------------------------------------------
+// == Button Default ==
 .button {
   @include mix.flex($justify: center, $align: center, $gap: $gap-btn);
 
   padding: 0;
   background-color: transparent;
-  border: 1px solid currentColor;
+  border: 0.0625rem solid currentColor;
   
   line-height: $line-height-btn;
   text-decoration: none;
@@ -44,28 +42,21 @@ $padding-btn-xl:  token.$space-ui-16 token.$space-ui-32;
     border-color $transition-btn,
     transform $transition-btn;
 
-  // ---------------------------------------------------
-  // Button Disabled
-  // ---------------------------------------------------
+  // Icon Protection
+  svg { flex-shrink: 0; }
+
+  // == Button Disabled ==
   &:disabled { cursor: not-allowed; opacity: $op-dsbld-btn; }
 
-  // ---------------------------------------------------
-  // Sizes Modifiers (required)
-  // ---------------------------------------------------
+  // Button Size Modifiers
   &.size-sm { padding: $padding-btn-sm; }
   &.size-md { padding: $padding-btn-md; }
   &.size-lg { padding: $padding-btn-lg; }
   &.size-xl { padding: $padding-btn-xl; }
 
-  // ---------------------------------------------------
-  // Shapes Modifiers 
-  // ---------------------------------------------------
+  // Button Shape & Variant Modifiers
   &.shape-square { aspect-ratio: 1 / 1; }
   &.shape-circle { aspect-ratio: 1 / 1; border-radius: $rd-full-round; }
-
-  // ---------------------------------------------------
-  // Variant Modifiers 
-  // ---------------------------------------------------
   &.is-pill  { border-radius: $rd-full-round; }
   &.is-ghost { text-decoration: underline; border-color: transparent; }
 }

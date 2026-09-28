@@ -1,9 +1,8 @@
 # Node / Dependencies
 node_modules/
 
-# Package lock (starter template — devs generate their own on install)
+# Package lock (Locked with Yarn for template stability)
 package-lock.json
-yarn.lock
 pnpm-lock.yaml
 bun.lockb
 

@@ -2,7 +2,56 @@
 
 All notable changes to AXIS will be documented in this file.
 
-The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and this project adheres to [Semantic Versioning](https://semver.org/).
+
+## [3.0.0] — 2026-09-28
+
+AXIS V3 is a structural refactor focused on making the foundation more systematic, scalable and easier to adapt across real projects.
+
+### Added
+
+- **Sass architecture:** Added the new `pages/` layer, expanding the architecture from five to six layers: `abstracts → base → layout → components → sections → pages`.
+- **Page isolation:** Added `_home.scss`, `_error.scss` and the `pages/_index.scss` exporter for route-specific styles.
+- **HTML partials:** Added `src/html/header.html` and `src/html/footer.html` for reusable markup fragments.
+- **HTML injection:** Added `vite-plugin-html-inject` and `<load src="...">` support.
+- **Multi-page readiness:** Extended `vite.config.js` with Rollup entry-point configuration via `rollupOptions.input`.
+- **Container tokens:** Added the dedicated `abstracts/tokens/_container.scss` partial and separated container sizing from spacing.
+- **PX → REM utility:** Added the `rem()` Sass function for converting unitless pixel values to `rem`.
+- **Animation layer:** Added `base/_keyframes.scss` with reusable `fade-in`, `slide-up` and `spin` keyframes.
+- **Semantic token areas:** Added dedicated semantic-token sections to applicable primitive token partials.
+- **Expanded motion scale:** Added `600`, `800` and `1000` duration tokens.
+- **Expanded opacity scale:** Added additional intermediate opacity tokens to provide a continuous range from `0` to `100`.
+- **Expanded radius scale:** Added `none`, `2xl` and `3xl` radius tokens, including larger surface radii of 24px and 32px.
+- **Expanded breakpoint map:** Added `3xs`, `xxl`, `3xl` and `4xl` while extending the full responsive range.
+- **Expanded container map:** Added `xxl` and `3xl` container sizes.
+- **Yarn workflow:** Added `yarn.lock` and standardized project setup/build commands around Yarn.
+
+### Changed
+
+- **Sass architecture:** Reorganized sections so `sections/` contains only global/reusable blocks such as header and footer; page-specific rules now live under `pages/`.
+- **Comment conventions:** Standardized Sass and JavaScript comments around the `// ==` block style.
+- **Documentation structure:** Removed secondary `README.md` files from implementation subdirectories and centralized project documentation at the repository root.
+- **Token strategy:** Unified the spacing scale around 2px/4px micro increments and 8px macro anchors.
+- **Typography scale:** Replaced the previous Major Third-based typography scale with a dedicated stepped scale and renamed font-weight tokens to semantic names such as `regular`, `medium`, `semi-bold`, `bold` and `extra-bold`.
+- **Typography semantics:** Moved base and heading semantic typography tokens into `abstracts/tokens/_typography.scss`; `base/_typography.scss` now consumes those tokens to set element styles.
+- **Line-height and tracking:** Added dedicated line-height and letter-spacing token scales.
+- **Units:** Converted AXIS Sass values to `rem` wherever practical, including former pixel-based primitive values and component measurements.
+- **Responsive mixins:** Rewrote `respond()` and `respond-up()` to use CSS comparison syntax (`width < value` and `width >= value`) instead of explicit `max-width` / `min-width` expressions.
+- **Semantic consumption:** Adjusted components and project sections to consume semantic roles where appropriate instead of repeatedly mapping the same primitives in individual files.
+- **Base styles:** Refined reset, global defaults and utility helpers for consistency with the V3 token system.
+- **Components:** Updated Button, Card and Badge token usage and values to align with the revised scales and local semantic variables.
+- **JavaScript documentation:** Cleaned `script.js` and `global.js` comments and clarified the responsibilities of `base/`, `components/` and `vendor/` areas directly in code.
+- **Package manager:** Replaced the NPM-oriented workflow from V2 with Yarn-based dependency management in the project documentation and lockfile.
+- **Vite configuration:** Reworked configuration comments in English and added HTML injection, multi-entry support and production asset output rules.
+
+### Removed
+
+- **`package-lock.json`:** Replaced by the tracked `yarn.lock` workflow.
+- **Subdirectory README files:** Removed redundant README documentation from `src/`, `src/sass/` and `src/js/` implementation folders.
+- **Page-specific styles from `sections/`:** Route-specific rules are no longer expected in global sections.
+- **Major Third font-size tokens:** Removed the previous modular-ratio values from the primitive typography scale.
+- **Container sizes from spacing:** Container constraints are now maintained in their own token partial.
+- **Old responsive query construction:** The explicit `max-width` / `min-width` implementation has been replaced by CSS range syntax.
 
 ## [2.0.0] — 2026-05-14
 

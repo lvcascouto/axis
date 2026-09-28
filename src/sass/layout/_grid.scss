@@ -2,8 +2,8 @@
 @use "../abstracts/mixins" as mix;
 
 // ===================================================
-// AXIS — GRID SYSTEM (Structural Layout)
-// Purpose: Provide flexible and responsive grid utilities
+// AXIS ▪︎ GRID SYSTEM (Structural Layout)
+// Provide flexible and responsive grid utilities
 // ===================================================
 // Naming:
 // .grid-{cols}
@@ -12,16 +12,12 @@
 // .col-span-{n}-{breakpoint}
 // ===================================================
 
-// ---------------------------------------------------
-// Auto Grid (Content-based)
-// ---------------------------------------------------
+// == Auto Grid (Content-based) ==
 .grid-auto {
-  @include mix.grid-auto($min: 280px);
+  @include mix.grid-auto($min: 17.5rem); // 280px
 }
 
-// ---------------------------------------------------
-// Fixed Columns (1–12): 
-// ---------------------------------------------------
+// == Fixed Columns (1–12) ==
 @for $i from 1 through 12 {
 
   .grid-#{$i} {
@@ -33,9 +29,9 @@
   }
 }
 
+// == Responsive Variants ==
 // ---------------------------------------------------
-// Responsive Variants
-// Note: responsive variants only override grid-template-columns.
+// *Note: responsive variants only override grid-template-columns.
 // The base .grid-{n} class must be present on the element.
 // Ex: <div class="grid-3 grid-1-md"> ← correct usage
 // ---------------------------------------------------

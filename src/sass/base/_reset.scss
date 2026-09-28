@@ -1,21 +1,27 @@
 // ===================================================
-// AXIS — RESET
+// AXIS ▪︎ RESET
 // Low-level structural normalization
 // ===================================================
 
-*, ::before, ::after { 
+// == Box-sizing & Spacing Reset ==
+*,
+*::before,
+*::after { 
   box-sizing: border-box;
-}
-
-* {
   margin: 0;
   padding: 0;
 }
 
+// == Text scale normalization ==
 html {
   -webkit-text-size-adjust: 100%; // Safari, Chrome, Android
   -moz-text-size-adjust: 100%;    // Firefox
   -ms-text-size-adjust: 100%;     // IE/Edge
   text-size-adjust: 100%;
   scroll-behavior: smooth;
+}
+
+// == List Reset ==
+ul, ol { 
+  list-style: none; 
 }

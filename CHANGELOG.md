@@ -161,4 +161,4 @@ Possible future improvements include:
 
 ---
 
-_For upcoming changes, see open [issues](https://github.com/lucas16716/axis/issues) and [pull requests](https://github.com/lucas16716/axis/pulls)._
+_For upcoming changes, see open [issues](https://github.com/lvcascouto/axis/issues) and [pull requests](https://github.com/lvcascouto/axis/pulls)._
